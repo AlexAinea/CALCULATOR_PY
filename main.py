@@ -11,24 +11,58 @@ display = tk.Label(display_frame, text="placeholder")
 display.pack()
 
 button_frame = tk.Frame(root)
-button_frame.pack()
+button_frame.columnconfigure(0, weight=1)
+button_frame.columnconfigure(1, weight=1)
+button_frame.columnconfigure(2, weight=1)
+button_frame.pack(fill='x')
+
 
 
 
 def buttons():
     numbers = [1,2,3,4,5,6,7,8,9,0]
     rows = 0
-    
     columns = 0
+
     for number in numbers:
-        button = tk.Button(button_frame,text = number)
-        button.grid(row = rows ,column = columns)
+        button = tk.Button(button_frame,text = number ,height= 3 , width= 3)
+        button.grid(row = rows ,column = columns, padx=0, pady=0, sticky="W,E")
 
         columns += 1
         rem = columns%3
         if rem == 0:
             columns = 0
             rows += 1
+
+    addition = tk.Button(button_frame, text = '+',height= 3 , width= 3)
+    addition.grid(row= 3, column= 1,sticky="W,E")
+
+    multiply = tk.Button(button_frame, text = '*',height= 3 , width= 3)
+    multiply.grid(row= 3, column= 2,sticky="W,E")
+
+    divide = tk.Button(button_frame, text = '/',height= 3 , width= 3)
+    divide.grid(row= 4, column= 0,sticky="W,E")
+
+    modulus = tk.Button(button_frame, text = '%',height= 3 , width= 3)
+    modulus.grid(row= 4, column= 1,sticky="W,E")
+
+    exponent = tk.Button(button_frame, text = '**',height= 3 , width= 3)
+    exponent.grid(row= 4, column= 2,sticky="W,E")
+
+    s_root = tk.Button(button_frame, text = "√",height= 3 , width= 3)
+    s_root.grid(row= 5, column= 0,sticky="W,E")
+
+    subtract = tk.Button(button_frame, text = '-',height= 3 , width= 3)
+    subtract.grid(row= 5, column= 1,sticky="W,E")
+
+    delete = tk.Button(button_frame, text = 'DELETE',height= 3 , width= 3)
+    delete.grid(row= 5, column= 2,sticky="W,E")
+
+    clear = tk.Button(button_frame, text = 'CLEAR',height= 3 , width= 3)
+    clear.grid(row= 6, column= 0,sticky="W,E")
+
+    equal = tk.Button(button_frame, text = '=',height= 3 , width= 3)
+    equal.grid(row= 6, column= 1,sticky="W,E")
 
 buttons()
 
