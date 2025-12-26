@@ -16,9 +16,6 @@ button_frame.columnconfigure(1, weight=1)
 button_frame.columnconfigure(2, weight=1)
 button_frame.pack(fill='x')
 
-
-
-
 def buttons():
     numbers = [1,2,3,4,5,6,7,8,9,0]
     rows = 0
