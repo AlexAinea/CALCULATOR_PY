@@ -61,7 +61,7 @@ def buttons():
     subtract.grid(row= 5, column= 1,sticky="W,E")
 
     delete = tk.Button(button_frame, text = 'DELETE',height= 3 , width= 3)
-    delete.grid(row= 5, column= 2,sticky="W,E")
+    delete.grid(row= 5, column= 2,sticky="W,E").
 
     clear = tk.Button(button_frame, text = 'CLEAR',height= 3 , width= 3)
     clear.grid(row= 6, column= 0,sticky="W,E")
