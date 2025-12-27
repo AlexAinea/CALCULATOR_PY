@@ -39,25 +39,25 @@ def buttons():
             columns = 0
             rows += 1
 
-    addition = tk.Button(button_frame, text = '+',height= 3 , width= 3)
+    addition = tk.Button(button_frame, text = '+',height= 3 , width= 3, command = lambda: value_entry('+') )
     addition.grid(row= 3, column= 1,sticky="W,E")
 
-    multiply = tk.Button(button_frame, text = '*',height= 3 , width= 3)
+    multiply = tk.Button(button_frame, text = '*',height= 3 , width= 3, command = lambda: value_entry('*'))
     multiply.grid(row= 3, column= 2,sticky="W,E")
 
-    divide = tk.Button(button_frame, text = '/',height= 3 , width= 3)
+    divide = tk.Button(button_frame, text = '/',height= 3 , width= 3, command = lambda: value_entry('/'))
     divide.grid(row= 4, column= 0,sticky="W,E")
 
-    modulus = tk.Button(button_frame, text = '%',height= 3 , width= 3)
+    modulus = tk.Button(button_frame, text = '%',height= 3 , width= 3, command = lambda: value_entry('%'))
     modulus.grid(row= 4, column= 1,sticky="W,E")
 
-    exponent = tk.Button(button_frame, text = '**',height= 3 , width= 3)
+    exponent = tk.Button(button_frame, text = '**',height= 3 , width= 3, command = lambda: value_entry('**'))
     exponent.grid(row= 4, column= 2,sticky="W,E")
 
-    s_root = tk.Button(button_frame, text = "√",height= 3 , width= 3)
+    s_root = tk.Button(button_frame, text = "√",height= 3 , width= 3, command = lambda: value_entry('√'))
     s_root.grid(row= 5, column= 0,sticky="W,E")
 
-    subtract = tk.Button(button_frame, text = '-',height= 3 , width= 3)
+    subtract = tk.Button(button_frame, text = '-',height= 3 , width= 3, command = lambda: value_entry('-'))
     subtract.grid(row= 5, column= 1,sticky="W,E")
 
     delete = tk.Button(button_frame, text = 'DELETE',height= 3 , width= 3)
