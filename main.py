@@ -16,13 +16,16 @@ button_frame.columnconfigure(1, weight=1)
 button_frame.columnconfigure(2, weight=1)
 button_frame.pack(fill='x')
 
+def value_entry(n):
+    print(n)
+
 def buttons():
     numbers = [1,2,3,4,5,6,7,8,9,0]
     rows = 0
     columns = 0
 
     for number in numbers:
-        button = tk.Button(button_frame,text = number ,height= 3 , width= 3)
+        button = tk.Button(button_frame,text = number ,height= 3 , width= 3, command=lambda n=number: value_entry(n))
         button.grid(row = rows ,column = columns, padx=0, pady=0, sticky="W,E")
 
         columns += 1
