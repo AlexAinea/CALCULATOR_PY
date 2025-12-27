@@ -7,7 +7,8 @@ root.geometry("600x600")
 display_frame = tk.Frame(root)
 display_frame.pack()
 
-display = tk.Label(display_frame, text="placeholder")
+prev_string = ''
+display = tk.Label(display_frame, text=prev_string)
 display.pack()
 
 button_frame = tk.Frame(root)
@@ -17,7 +18,11 @@ button_frame.columnconfigure(2, weight=1)
 button_frame.pack(fill='x')
 
 def value_entry(n):
+    global prev_string
     print(n)
+    n_string = str(n)
+    prev_string += n_string
+    display.config(text = prev_string)
 
 def buttons():
     numbers = [1,2,3,4,5,6,7,8,9,0]
