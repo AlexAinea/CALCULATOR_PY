@@ -1,4 +1,5 @@
 import tkinter as tk
+from asteval import Interpreter
 
 root = tk.Tk()
 root.title("CALCULATOR")
@@ -23,6 +24,18 @@ def value_entry(n):
     n_string = str(n)
     prev_string += n_string
     display.config(text = prev_string)
+
+def equal():
+    global prev_string
+
+    try:
+        result = Interpreter(prev_string)
+        prev_string += result
+        display.config(text = prev_string)
+    except Exception:
+        display.config(text = "ERROR")
+    
+
 
 def buttons():
     numbers = [1,2,3,4,5,6,7,8,9,0]
