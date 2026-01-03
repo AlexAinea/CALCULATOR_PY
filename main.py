@@ -33,7 +33,8 @@ def equal():
     except Exception:
         display.config(text = "ERROR")
     
-
+def delete():
+    pass
 
 def buttons():
     numbers = [1,2,3,4,5,6,7,8,9,0]
@@ -71,8 +72,8 @@ def buttons():
     subtract = tk.Button(button_frame, text = '-',height= 3 , width= 3, command = lambda: value_entry('-'))
     subtract.grid(row= 5, column= 1,sticky="W,E")
 
-    delete = tk.Button(button_frame, text = 'DELETE',height= 3 , width= 3)
-    delete.grid(row= 5, column= 2,sticky="W,E")
+    delete_btn = tk.Button(button_frame, text = 'DELETE',height= 3 , width= 3 , command = delete)
+    delete_btn.grid(row= 5, column= 2,sticky="W,E")
 
     clear = tk.Button(button_frame, text = 'CLEAR',height= 3 , width= 3)
     clear.grid(row= 6, column= 0,sticky="W,E")
