@@ -1,5 +1,4 @@
 import tkinter as tk
-from asteval import Interpreter
 
 root = tk.Tk()
 root.title("CALCULATOR")
@@ -29,9 +28,8 @@ def equal():
     global prev_string
 
     try:
-        result = Interpreter(prev_string)
-        prev_string += result
-        display.config(text = prev_string)
+        result = eval(str(prev_string))
+        display.config(text = result)
     except Exception:
         display.config(text = "ERROR")
     
@@ -79,8 +77,8 @@ def buttons():
     clear = tk.Button(button_frame, text = 'CLEAR',height= 3 , width= 3)
     clear.grid(row= 6, column= 0,sticky="W,E")
 
-    equal = tk.Button(button_frame, text = '=',height= 3 , width= 3)
-    equal.grid(row= 6, column= 1,sticky="W,E")
+    equal_btn = tk.Button(button_frame, text = '=',height= 3 , width= 3 ,command= equal)
+    equal_btn.grid(row= 6, column= 1,sticky="W,E")
 
 buttons()
 
