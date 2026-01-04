@@ -38,6 +38,9 @@ def delete():
     prev_string = prev_string[:-1]
     display.config(text = prev_string)
 
+def clear():
+    pass
+
 
 def buttons():
     numbers = [1,2,3,4,5,6,7,8,9,0]
@@ -78,8 +81,8 @@ def buttons():
     delete_btn = tk.Button(button_frame, text = 'DELETE',height= 3 , width= 3 , command = delete)
     delete_btn.grid(row= 5, column= 2,sticky="W,E")
 
-    clear = tk.Button(button_frame, text = 'CLEAR',height= 3 , width= 3)
-    clear.grid(row= 6, column= 0,sticky="W,E")
+    clear_btn = tk.Button(button_frame, text = 'CLEAR',height= 3 , width= 3)
+    clear_btn.grid(row= 6, column= 0,sticky="W,E")
 
     equal_btn = tk.Button(button_frame, text = '=',height= 3 , width= 3 ,command= equal)
     equal_btn.grid(row= 6, column= 1,sticky="W,E")
