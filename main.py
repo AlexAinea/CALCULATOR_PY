@@ -74,7 +74,7 @@ def buttons():
     exponent = tk.Button(button_frame, text = '**',height= 3 , width= 3, command = lambda: value_entry('**'))
     exponent.grid(row= 4, column= 2,sticky="W,E")
 
-    s_root = tk.Button(button_frame, text = "√",height= 3 , width= 3, command = lambda: value_entry('√'))
+    s_root = tk.Button(button_frame, text = "√",height= 3 , width= 3, command = lambda: value_entry('**0.5'))
     s_root.grid(row= 5, column= 0,sticky="W,E")
 
     subtract = tk.Button(button_frame, text = '-',height= 3 , width= 3, command = lambda: value_entry('-'))
