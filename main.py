@@ -34,7 +34,10 @@ def equal():
         display.config(text = "ERROR")
     
 def delete():
-    pass
+    global prev_string
+    prev_string = prev_string[:-1]
+    display.config(text = prev_string)
+
 
 def buttons():
     numbers = [1,2,3,4,5,6,7,8,9,0]
